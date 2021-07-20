@@ -1,0 +1,91 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  // Prevents the blue background highlight showing up
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  /* Sets root font size to 10px based on 16px font size browser settings */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  &:focus-within {
+    scroll-behavior: smooth;
+  }
+
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+ul[role="list"], ol[role="list"] {
+  list-style: none;
+}
+
+img, svg, picture {
+  height: auto;
+  display: inline-block;
+  max-width: 100%;
+}
+
+/*
+  Remove the gap between audio, canvas, iframes,
+  images, videos and the bottom of their containers:
+*/
+
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+blockquote, q {
+  quotes: none;
+
+  &::before,
+  &::after {
+    content: none;
+  }
+
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  background: none;
+}
+
+/*
+  Removes the 'X' from Chrome & Internet Explorer
+  that shows up at the end of search inputs when
+  a value is present
+*/
+
+input[type="search"] {
+
+  &::-ms-clear,
+  &::-ms-reveal,
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+
+}

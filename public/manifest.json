@@ -1,0 +1,32 @@
+{
+  "remove_these": {
+    "reference": "https://web.dev/add-manifest/",
+    "maskable.icon": "https://www.leereamsnyder.com/blog/favicons-in-2021",
+    "splash_screen": "Browser will use name, background_color, and icons for the loading/splash_screen",
+    "name": "Used when the app is installed, typically shows on splash screen",
+    "short_name": "Shown on the user's home screen, launcher, or other places where space is limited",
+    "description": "Similar length to og:description. Used alongside the screenshots for install prompts",
+    "background_color": "Background color of the splash screen before app loads. Typically same color as your app background",
+    "display": "fullscreen, standalone, or minimal-ui",
+    "shortcuts": "When user long-presses app icon in mobile, entries here will show as dropdown items. Useful for quick tasks",
+    "theme_color": "Color of the browser header",
+    "start_url": "Url at which the app should start",
+    "scope": "If user goes outside scope, normal browser window is used. e.g. /app => /app/item-1 inside, /pages is outside scope",
+    "screenshots": "Shown in the install prompt on mobile"
+  },
+  "name": "Vite Configuration Template",
+  "short_name": "Vite Config",
+  "description": "Compilation of settings for a vite project.",
+  "background_color": "#FFFFFF",
+  "display": "minimal-ui",
+  "shortcuts": {},
+  "theme_color": "#0362FC",
+  "start_url": "/app",
+  "scope": "/app",
+  "screenshots": {},
+  "icons": [
+    { "src": "/192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/512.png", "type": "image/png", "sizes": "512x512" },
+    { "src": "/android-maskable-192.png", "type": "image/png", "sizes": "192x192", "purpose": "maskable" }
+  ]
+}

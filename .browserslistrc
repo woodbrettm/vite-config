@@ -1,0 +1,8 @@
+# Run npx browserslist to see what browsers are targeted
+# with this query.
+
+since 2018
+>= 0.5%
+not op_mini all
+not ie 11
+not dead

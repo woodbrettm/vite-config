@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "../.eslintrc.json",
+    "plugin:playwright/jest-playwright"
+  ],
+  "globals": {
+    "page": true
+  }
+}

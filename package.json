@@ -1,0 +1,55 @@
+{
+  "name": "vite-config",
+  "homepage": "https://github.com/woodbrettm/vite-config.git",
+  "repository": "https://github.com/woodbrettm/vite-config.git",
+  "author": "Brett Wood <brett@woodbrettm.com>",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [
+    "template",
+    "vite"
+  ],
+  "scripts": {
+    "lint:js": "eslint '**/*.js' --no-error-on-unmatched-pattern",
+    "lint:css": "stylelint '**/*.scss'",
+    "test:unit": "jest -c jest.unit.config.js",
+    "test:e2e": "jest -c jest.e2e.config.js",
+    "preinstall": "git config core.hooksPath githooks",
+    "build": "vite build",
+    "dev": "vite --open",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-compat": "^3.11.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-playwright": "^0.4.0",
+    "jest": "^27.0.6",
+    "jest-esm-transformer": "^1.0.0",
+    "jest-playwright-preset": "^1.7.0",
+    "playwright": "^1.12.3",
+    "postcss": "^8.3.5",
+    "postcss-combine-duplicated-selectors": "^10.0.3",
+    "postcss-combine-media-query": "^1.0.1",
+    "sass": "^1.35.2",
+    "stylelint": "^13.13.1",
+    "stylelint-no-unsupported-browser-features": "^5.0.1",
+    "stylelint-scss": "^3.20.0",
+    "vite": "^2.4.2",
+    "vite-plugin-compression": "^0.3.1",
+    "vite-plugin-imagemin": "^0.4.1"
+  }
+}

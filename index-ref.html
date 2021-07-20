@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- If you want to specify the country, do en-US for example -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Page Title</title>
+
+  <!-- Initiate a connection to a site you anticipate will be needed, like a CDN.
+       No need to do this if you're preloading your fonts from the same CDN -->
+  <link rel="preconnect" href="https://yourcdn.com">
+
+  <!-- Preload Your Web Font Files. Use woff2 when available -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/src/fonts/custom-font.woff2">
+
+  <!-- Tell google not to index the pg or follow any links -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- PWA manifest file -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Always include the canonical link for every page -->
+  <link rel="canonical" href="https://yourdomain.com/page">
+
+  <!-- Lazy Loading FadeIn Override Example. Be careful with the style tag inside
+       noscript in <head>. Done incorrectly it can invalidate the entire <head> -->
+  <noscript><style>.lazy{ opacity: 1 !important }</style></noscript>
+
+  <!------------------------------------
+    [START] Min Required Social Media Tags
+  -------------------------------------->
+
+  <!-- https://ogp.me/ -->
+
+  <!-- Same as <title> but focused for social media -->
+  <meta property="og:title" content="Page Title" />
+
+  <!-- Canonical link of the page -->
+  <meta property="og:url" content="https://example.com/page" />
+
+  <!-- Make sure description is less than 200 characters (for twitter) -->
+  <meta property="og:description" content="Description here.">
+
+  <!-- Useful if your site displays content based on third-party items. 
+       For example, you're IMDB doing reviews on movies and tv shows -->
+  <meta property="og:site_name" content="Site Name">
+
+  <!-- https://ogp.me/#types -->
+  <meta property="og:type" content="website">
+
+  <!-- https://whatabout.dev/formats-for-open-graph-images
+       Use a 1200x1200 image. No svg. Twitter uses 1st frame of gif. 
+       When creating the image, test the square image against cropping using
+       1.93:1, 1.91:1, and 4:3 aspect ratios, using the center as the ref point -->
+  <meta property="og:image" content="https://example.com/image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+  <meta property="twitter:image:alt" content="Image Alt Text">
+
+  <!-- "player" and "app" types are also available, those have specific attrs required
+       https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Reference the current document's author's twitter account -->
+  <meta name="twitter:creator" content="@author-username">
+
+  <!-- Reference the current website's twitter account -->
+  <meta name="twitter:site" content="@website-username">
+
+  <!------------------------------------
+    [END] Min Required Social Media Tags
+  -------------------------------------->
+
+  <!------------------------------------
+    [START] Min Required Favicons
+  -------------------------------------->
+
+  <!-- Some info was used from here:
+       https://www.leereamsnyder.com/blog/favicons-in-2021 -->
+
+  <!-- Include a favicon.ico 32x32 in your site root or in the public folder
+       for your bundler to copy to the root. Don't link it here though
+       as chrome seems to prefer it over your svg icon. Browsers know about your
+       favicon.ico even if you don't link to it in your html -->
+
+  <!-- Put your png icons first, then your svg icons. Chromium tends to favor svg first,
+       then the smallest of the png icons closest to 32x32. If all pngs are 95x95 and smaller,
+       Firefox will prefer svg first. With pngs 96x96 and up, Firefox will sometimes prefer those 
+       over the SVG icon. Firefox seems to prefer larger png icons over smaller. -->
+
+  <!-- Safari preference is untested at the moment -->
+
+  <!-- Useful as a base and fallback -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/favicons/icon-32x32.png">
+
+  <!-- Do not go over 95x95. Once you hit 96x96, Firefox will start preferring
+       this icon over your svg part of the time. The larger the png, the more
+       Firefox will use it over the svg. At 512x512 pngs, the svg is never used -->
+  <link rel="icon" type="image/png" sizes="90x90" href="/src/favicons/icon-90.png">
+
+  <!-- You can also reuse the 192 icon from your manifest.json -->
+  <link rel="apple-touch-icon" href="/src/favicons/icon-180.png">
+
+  <!-- Avoid using the prefers dark theme media query in the favicon. Instead
+       ensure the favicon works on both light and dark backgrounds -->
+  <link rel="icon" type="image/svg+xml" href="/src/favicons/favicon.svg">
+  
+  <!-- The Apple Icon SVG code must contain only 1 path, no fill specified.
+       color="#28283D" is example of fill color. This tag isn't necessary, but
+       useful for safari. Otherwise a 32w png should be fine -->
+  <link rel="mask-icon" type="image/svg+xml" href="/src/favicons/mask-icon-apple.svg" color="#28283D">
+
+  <!------------------------------------
+    [END] Min Required Favicons
+  -------------------------------------->
+
+  <!-- disallow Twitter from using your site's info for personalization purposes -->
+  <meta name="twitter:dnt" content="on">
+
+  <!-- Vite will convert this link to a version with a hash for cache busting -->
+  <script type="module" defer src="/src/index.js"></script>
+
+  <!-- These below are an alternative to using css variables
+       and the html[theme="dark"] selector for dark mode -->
+  <link rel="stylesheet" href="/colors.css">
+  <link rel="stylesheet alternate" href="/dark-mode.css" media="none">
+
+</head>
+<body>
+  <h1>Hello World!</h1>
+</body>
+</html>
