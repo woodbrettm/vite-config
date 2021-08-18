@@ -39,7 +39,7 @@ These files contain documentaton that is helpful for referencing purposes.
 | [`reset.scss`](./src/styles/reset.scss)             | A file containing some browser CSS resets to disable unwanted behavior     |
 
 
-### Node & Browser Compatibility
+## Node & Browser Compatibility
 
 The project is configured to enforce JS compatibility using both `.browserslistrc` and the `engines.node` entry in `package.json`.
 SCSS browser compatibility is also enforced using the `.browserslistrc` file.
