@@ -6,7 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Page Title</title>
+  <title>Page Title - 60 Chars Or Less</title>
+  <meta name="description" content="SERP Description - Between 150 - 160 Chars">
 
   <!-- Initiate a connection to a site you anticipate will be needed, like a CDN.
        No need to do this if you're preloading your fonts from the same CDN -->
@@ -29,10 +30,11 @@
   <noscript><style>.lazy{ opacity: 1 !important }</style></noscript>
 
   <!------------------------------------
-    [START] Min Required Social Media Tags
+    [START] Social Media Tags
   -------------------------------------->
 
   <!-- https://ogp.me/ -->
+  <!-- https://metatags.io/ -->
 
   <!-- Same as <title> but focused for social media -->
   <meta property="og:title" content="Page Title" />
@@ -63,18 +65,18 @@
        https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup -->
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Reference the current document's author's twitter account -->
+  <!-- Reference the current document's author's twitter account. Not required. -->
   <meta name="twitter:creator" content="@author-username">
 
-  <!-- Reference the current website's twitter account -->
+  <!-- Reference the current website's twitter account Not required. -->
   <meta name="twitter:site" content="@website-username">
 
   <!------------------------------------
-    [END] Min Required Social Media Tags
+    [END] Social Media Tags
   -------------------------------------->
 
   <!------------------------------------
-    [START] Min Required Favicons
+    [START] Favicons
   -------------------------------------->
 
   <!-- Some info was used from here:
@@ -88,9 +90,7 @@
   <!-- Put your png icons first, then your svg icons. Chromium tends to favor svg first,
        then the smallest of the png icons closest to 32x32. If all pngs are 95x95 and smaller,
        Firefox will prefer svg first. With pngs 96x96 and up, Firefox will sometimes prefer those 
-       over the SVG icon. Firefox seems to prefer larger png icons over smaller. -->
-
-  <!-- Safari preference is untested at the moment -->
+       over the SVG icon. Firefox seems to prefer larger png icons over smaller. Safari untested atm -->
 
   <!-- Useful as a base and fallback -->
   <link rel="icon" type="image/png" sizes="32x32" href="/src/favicons/icon-32x32.png">
@@ -113,7 +113,7 @@
   <link rel="mask-icon" type="image/svg+xml" href="/src/favicons/mask-icon-apple.svg" color="#28283D">
 
   <!------------------------------------
-    [END] Min Required Favicons
+    [END] Favicons
   -------------------------------------->
 
   <!-- disallow Twitter from using your site's info for personalization purposes -->

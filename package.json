@@ -3,7 +3,7 @@
   "homepage": "https://github.com/woodbrettm/vite-config.git",
   "repository": "https://github.com/woodbrettm/vite-config.git",
   "author": "Brett Wood <brett@woodbrettm.com>",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [

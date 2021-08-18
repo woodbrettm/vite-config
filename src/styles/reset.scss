@@ -2,10 +2,22 @@
   box-sizing: border-box;
   // Prevents the blue background highlight showing up
   -webkit-tap-highlight-color: transparent;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-  /* Sets root font size to 10px based on 16px font size browser settings */
+  /*
+    font-size: 62.5%
+
+    Sets root font size to 10px based on 16px font size browser settings.
+    Makes it easier when using REM for your font sizes, etc.
+
+    Please note when using em or rem in media query definitions, e.g.
+    @media screen and (min-width: 48em) {}, the browser font size
+    is used, not the root font-size you set. Even if your html font-size
+    is set to 62.5% (10px), the above media query evalutates to 48em x 16px = 768px.
+  */
   font-size: 62.5%;
   scroll-behavior: smooth;
 
@@ -28,7 +40,7 @@ em {
   font-style: normal;
 }
 
-ul[role="list"], ol[role="list"] {
+ul, ol {
   list-style: none;
 }
 
@@ -88,4 +100,14 @@ input[type="search"] {
     display: none;
   }
 
+}
+
+// Disables font boosting on p elements
+
+p {
+  max-height: 100%;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
 }
