@@ -4,7 +4,12 @@
     "stylelint-scss"
   ],
   "rules": {
-    "plugin/no-unsupported-browser-features": [true, {}],
+    "plugin/no-unsupported-browser-features": [true, {
+      "ignorePartialSupport": true,
+      "ignore": [
+        "text-size-adjust"
+      ]
+    }],
     "alpha-value-notation": "number",
     "at-rule-empty-line-before": "always",
     "at-rule-name-case": "lower",
@@ -110,7 +115,7 @@
     "number-no-trailing-zeros": true,
     "property-case": "lower",
     "property-no-unknown": true,
-    "property-no-vendor-prefix": true,
+    "property-no-vendor-prefix": null,
     "rule-empty-line-before": "always",
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-space-after": "never",
