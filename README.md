@@ -1,3 +1,8 @@
+# Archived
+
+This repo has been archived as it's outdated, and is more useful as a reference
+than a project starter template.
+
 # Vite Config Template
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
